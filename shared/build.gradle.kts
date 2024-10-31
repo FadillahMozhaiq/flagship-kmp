@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.apollo)
+    id("com.thinkflagship.shorts.conventions.detekt")
 }
 
 kotlin {

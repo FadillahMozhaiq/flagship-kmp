@@ -2,6 +2,7 @@ rootProject.name = "FlagshipShorts"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
+    includeBuild("flagship-short-kotlin-convention")
     repositories {
         google {
             mavenContent {
@@ -25,6 +26,12 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+    }
+
+    versionCatalogs {
+        create("conventions") {
+            from(files("flagship-short-kotlin-convention/gradle/conventions.versions.toml"))
+        }
     }
 }
 
